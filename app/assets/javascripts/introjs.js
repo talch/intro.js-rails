@@ -1038,6 +1038,9 @@ previousStep: function() {
 _previousStep.call(this);
 return this;
 },
+currentStep: function(){
+return this._currentStep
+},
 exit: function() {
 _exitIntro.call(this, this._targetElement);
 return this;

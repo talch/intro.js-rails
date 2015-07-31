@@ -1030,6 +1030,9 @@ goToStep: function(step) {
 _goToStep.call(this, step);
 return this;
 },
+getStep: function() {
+    return this._currentStep;
+},
 nextStep: function() {
 _nextStep.call(this);
 return this;

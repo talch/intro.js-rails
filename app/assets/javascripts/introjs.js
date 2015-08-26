@@ -181,31 +181,6 @@ _previousStep.call(self);
 } else if (e.keyCode === 39) {
 //right arrow
 _nextStep.call(self);
-} else if (e.keyCode === 13) {
-//srcElement === ie
-var target = e.target || e.srcElement;
-if (target && target.className.indexOf('introjs-prevbutton') > 0) {
-//user hit enter while focusing on previous button
-_previousStep.call(self);
-} else if (target && target.className.indexOf('introjs-skipbutton') > 0) {
-//user hit enter while focusing on skip button
-if (self._introItems.length - 1 == self._currentStep && typeof (self._introCompleteCallback) === 'function') {
-self._introCompleteCallback.call(self);
-}
-//check if any callback is defined
-if (self._introExitCallback != undefined) {
-self._introExitCallback.call(self);
-}
-_exitIntro.call(self, targetElm);
-} else {
-//default behavior for responding to enter
-_nextStep.call(self);
-}
-//prevent default behaviour on hitting Enter, to prevent steps being skipped in some browsers
-if(e.preventDefault) {
-e.preventDefault();
-} else {
-e.returnValue = false;
 }
 }
 };

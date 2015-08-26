@@ -182,8 +182,6 @@ _previousStep.call(self);
 //right arrow
 _nextStep.call(self);
 }
-}
-}
 };
 self._onResize = function(e) {
 _setHelperLayerPosition.call(self, document.querySelector('.introjs-helperLayer'));
